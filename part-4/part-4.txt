@@ -123,3 +123,17 @@ one_to_many_assignment=# SELECT name FROM provinces WHERE id=14;
 ---------
  Ontario
 (1 row)
+
+8.  What country is 4740 McDermott Street in?
+
+one_to_many_assignment=# SELECT country_id FROM provinces WHERE name='Ontario';
+ country_id
+------------
+          1
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM countries WHERE id=1;
+ id |  name  | year_founded | national_animal
+----+--------+--------------+-----------------
+  1 | Canada |         1867 | beaver
+(1 row)
