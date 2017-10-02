@@ -32,3 +32,37 @@
  |id   |
  |name |
  +-----+
+
+2.Dentist Office
+
++------+
+|Office|
++------+
+|id    |
+|Name  |
++------+
+
++------------+
+|Patient     |
++------------+
+|id          |
+|Name        |
+|Contact Info|
++------------+
+
++---------+
+|Dentist  |
++---------+
+|id       |
+|Name     |
+|office_id|
++---------+
+
++-----------+
+|Appointment|
++-----------+
+|id         |
+|dentist_id |
+|patient_id |
+|Date & Time|
++-----------+
