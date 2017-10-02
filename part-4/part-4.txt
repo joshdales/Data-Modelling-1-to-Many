@@ -49,20 +49,34 @@ one_to_many_assignment=# SELECT author_id FROM articles WHERE title='Coding Boot
          4
 (1 row)
 
-one_to_many_assignment=# \d+ authors
-                                                     Table "public.authors"
- Column |          Type          |                      Modifiers                       | Storage  | Stats target | Description
---------+------------------------+------------------------------------------------------+----------+--------------+-------------
- id     | integer                | not null default nextval('authors_id_seq'::regclass) | plain    |              |
- name   | character varying(255) |                                                      | extended |              |
- bio    | text                   |                                                      | extended |              |
-Indexes:
-    "authors_pkey" PRIMARY KEY, btree (id)
-Referenced by:
-    TABLE "articles" CONSTRAINT "articles_author_id_fkey" FOREIGN KEY (author_id) REFERENCES authors(id)
-
 one_to_many_assignment=# SELECT name FROM authors WHERE id=4;
        name
 -------------------
  Tilde Ann Thurium
 (1 row)
+
+4. Write a series of SQL queries to find out how many provinces are in Canada.
+one_to_many_assignment=# SELECT id FROM countries WHERE name='Canada';
+ id
+----
+  1
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM provinces WHERE country_id = 1;
+ id |           name            | year_founded | country_id
+----+---------------------------+--------------+------------
+ 14 | Ontario                   |         1867 |          1
+ 15 | Quebec                    |         1867 |          1
+ 16 | New Brunswick             |         1867 |          1
+ 17 | New Brunswick             |         1867 |          1
+ 18 | Nova Scotia               |         1867 |          1
+ 19 | Manitoba                  |         1870 |          1
+ 20 | Northwest Territories     |         1870 |          1
+ 21 | British Columbia          |         1871 |          1
+ 22 | Prince Edward Island      |         1873 |          1
+ 23 | Yukon Territory           |         1898 |          1
+ 24 | Alberta                   |         1905 |          1
+ 25 | Saskatchewan              |         1905 |          1
+ 26 | Newfoundland and Labrador |         1949 |          1
+ 27 | Nunavut                   |         1999 |          1
+(14 rows)
