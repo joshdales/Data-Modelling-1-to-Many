@@ -109,3 +109,17 @@ one_to_many_assignment=# SELECT name FROM cities WHERE id=11;
 --------
  Ottawa
 (1 row)
+
+7.  What province is 4740 McDermott Street in?
+
+one_to_many_assignment=# SELECT province_id FROM cities WHERE name='Ottawa';
+ province_id
+-------------
+          14
+(1 row)
+
+one_to_many_assignment=# SELECT name FROM provinces WHERE id=14;
+  name
+---------
+ Ontario
+(1 row)
