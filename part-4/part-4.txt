@@ -137,3 +137,34 @@ one_to_many_assignment=# SELECT * FROM countries WHERE id=1;
 ----+--------+--------------+-----------------
   1 | Canada |         1867 | beaver
 (1 row)
+
+9. Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
+one_to_many_assignment=# SELECT * FROM persons WHERE name='Destini Davis';
+ id |     name      | age | residence_id
+----+---------------+-----+--------------
+  3 | Destini Davis |  37 |            2
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM residences WHERE id=2;
+ id |      address      | year_built | city_id
+----+-------------------+------------+---------
+  2 | 537 Wyman Harbors |       1975 |       8
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM cities WHERE id=8;
+ id |  name   | year_founded | province_id
+----+---------+--------------+-------------
+  8 | Toronto |         1793 |          14
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM provinces WHERE id=14;
+ id |  name   | year_founded | country_id
+----+---------+--------------+------------
+ 14 | Ontario |         1867 |          1
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM countries WHERE id=1;
+ id |  name  | year_founded | national_animal
+----+--------+--------------+-----------------
+  1 | Canada |         1867 | beaver
+(1 row)
