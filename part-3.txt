@@ -4,8 +4,8 @@
 |USER     |
 +---------+
 |id       |
-|real_name|
-|user_name|
+|Real name|
+|User name|
 |email    |
 +---------+
 
@@ -14,7 +14,7 @@
 +---------+
 |id       |
 |user_id  |
-|message  |
+|Message  |
 |thread_id|
 +---------+
 
@@ -22,7 +22,7 @@
  |THREAD  |
  +--------+
  |id      |
- |name    |
+ |Name    |
  |forum_id|
  +--------+
 
@@ -30,7 +30,7 @@
  |FORUM|
  +-----+
  |id   |
- |name |
+ |Name |
  +-----+
 
 2.Dentist Office
@@ -67,7 +67,7 @@
 |Date & Time|
 +-----------+
 
-3. Eventbrite-style
+3. Event app
 
 +---------+
 |EVENT    |
