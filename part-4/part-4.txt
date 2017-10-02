@@ -1,0 +1,16 @@
+1.Find the author with the name 'Kara Melton' and then select all the articles she has written.
+
+one_to_many_assignment=# SELECT id FROM authors WHERE name='Kara Melton';
+ id
+----
+  8
+(1 row)
+
+one_to_many_assignment=# SELECT title FROM articles WHERE author_id=8;
+                                              title
+--------------------------------------------------------------------------------------------------
+ How Tech Business Models Come From Marginalized Communities, But Startups Are Still Mostly White
+ Confronting the Assumption of Whiteness in Virtual Spaces
+(2 rows)
+
+2. Find Ontario in the provinces table and then find all the cities in that province.
