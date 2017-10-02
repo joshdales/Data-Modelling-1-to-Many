@@ -80,3 +80,18 @@ one_to_many_assignment=# SELECT * FROM provinces WHERE country_id = 1;
  26 | Newfoundland and Labrador |         1949 |          1
  27 | Nunavut                   |         1999 |          1
 (14 rows)
+
+5.How many people live at 4740 McDermott Street?
+
+one_to_many_assignment=# SELECT id FROM residences WHERE address='4740 McDermott Street';
+ id
+----
+  9
+(1 row)
+
+one_to_many_assignment=# SELECT * FROM persons WHERE residence_id=8;
+ id |       name       | age | residence_id
+----+------------------+-----+--------------
+ 14 | Mr. Diamond King |  53 |            8
+ 15 | Onie Hagenes     |  39 |            8
+(2 rows)
