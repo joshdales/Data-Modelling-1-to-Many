@@ -138,7 +138,7 @@ one_to_many_assignment=# SELECT * FROM countries WHERE id=1;
   1 | Canada |         1867 | beaver
 (1 row)
 
-9. Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
+9.  Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
 one_to_many_assignment=# SELECT * FROM persons WHERE name='Destini Davis';
  id |     name      | age | residence_id
 ----+---------------+-----+--------------
@@ -167,4 +167,18 @@ one_to_many_assignment=# SELECT * FROM countries WHERE id=1;
  id |  name  | year_founded | national_animal
 ----+--------+--------------+-----------------
   1 | Canada |         1867 | beaver
+(1 row)
+
+10.  How many articles has Aditya Mukerjee written?
+
+one_to_many_assignment=# SELECT * FROM authors WHERE name='Aditya Mukerjee';
+ id |      name       |                                                                                                                                                            bio
+----+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  2 | Aditya Mukerjee | Aditya is an entrepreneur, investor, and engineer based in New York City. He studied statistics at Columbia and computer science at Cornell, and spends his free time playing German-style board games and listening to embarrassing music.\nAditya organizes Identity Hackers, a group for LGBTQ+ engineers in New York.
+(1 row)
+
+one_to_many_assignment=# SELECT title FROM articles WHERE author_id=2 limit 5;
+                          title
+---------------------------------------------------------
+ I Can Text You A Pile of Poo, But I Can’t Write My Name
 (1 row)
