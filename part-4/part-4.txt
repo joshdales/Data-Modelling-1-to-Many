@@ -14,3 +14,15 @@ one_to_many_assignment=# SELECT title FROM articles WHERE author_id=8;
 (2 rows)
 
 2. Find Ontario in the provinces table and then find all the cities in that province.
+
+one_to_many_assignment=# SELECT id FROM provinces WHERE name='Ontario';
+ id
+----
+ 14
+(1 row)
+one_to_many_assignment=# SELECT * FROM cities WHERE province_id=14;
+ id |  name   | year_founded | province_id
+----+---------+--------------+-------------
+  8 | Toronto |         1793 |          14
+ 11 | Ottawa  |         1826 |          14
+(2 rows)
